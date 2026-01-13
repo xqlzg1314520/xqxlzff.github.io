@@ -4,7 +4,7 @@
 
 <head>
 
-	<title>天天开心</title>
+	<title>树洞空间</title>
 
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
@@ -43,7 +43,7 @@
 	   { 
 		   if (!pass1)
 			history.go(-1);
-		if (pass1 == "123")
+		if (pass1 == "1201")
 		 {
 		   //设置密码 
 		   //alert('口令正确，进行跳转'); 
@@ -64,6 +64,7 @@
    </script>
     <script type="text/javascript">
 		alert("欢迎观看小刘的大制作");
+		alert("听说想加上音乐，安排！");
 		alert("随机点击飘落的树叶可以收听我点的歌哦!");
   function toggleSound() {
             var music = document.getElementById("bgmusic");//获取ID
@@ -86,18 +87,27 @@ setInterval("toggleSound()",1);
 	<div id="content">
 
 		<div id="code">
-				<span class="keyword">祝你</span><br />
-                <span class="space">天天开心！！！</span><br />
-				<span class="keyword">天天开心！！！</span><br />
-				<span class="space">天天开心！！！</span><br />
-				<span class="keyword">天天开心！！！</span><br />
-				<span class="space">天天开心！！！</span><br />
-				<span class="keyword">天天开心！！！</span><br />
-				<span class="space">天天开心！！！</span><br />
-				<span class="keyword">天天开心！！！</span><br />
-				<span class="space">天天开心！！！</span><br />
-				<span class="keyword">天天开心！！！</span><br />
-			    <span class="space">天天开心！！！</span><br />
+				<span class="keyword">徐倩</span><br />
+                <span class="space">我喜欢你</span><br />
+				<span class="keyword">你愿意做我女朋友吗</span><br />
+				<span class="space">在我们认识了解的过程当中</span><br />
+				<span class="keyword">你带给我的感受就是</span><br />
+				<span class="space">成熟中带着可爱，可爱里边又透露着成熟的人</span><br />
+				<span class="space">你外表坚强，但内心也有自己的小脆弱</span><br />
+				<span class="space">每次我们彻夜长谈，我就对你的喜欢更多一分</span><br />
+				<span class="keyword">好想抱抱你</span><br />
+				<span class="space">你也很会关心人，会担心我</span><br />
+				<span class="space">会对我有积极的回应</span><br />
+				<span class="keyword">我能获取到你的正回馈</span><br />
+				<span class="space">和你相处的这两个月真的很美好</span><br />
+				<span class="keyword">跟你在一起满满得正能量</span><br />
+				<span class="space">你丧的一面就会微乎其微</span><br />
+				<span class="keyword">纵使人有百面</span><br />
+				<span class="space">但我喜欢你的每一面</span><br />
+				<span class="keyword">我喜欢你</span><br />
+			    <span class="space">真的真的好喜欢你</span><br />
+				<span class="keyword">徐倩</span><br />
+			    <span class="space">你愿意做我女朋友吗</span><br />
 			</div>
 
 		<div id="loveHeart">
@@ -106,14 +116,14 @@ setInterval("toggleSound()",1);
 					<div id="messages">
 						<div id="elapseClock"></div>
 					</div>
-					<!-- <div id="loveu">
+					<div id="loveu">
 						<video width="320" height="240" controls autoplay margin>
 							<source src="video/test.mp4" type="video/mp4">
 							<source src="video/test.ogg" type="video/ogg">
 							<source src="video/test.webm" type="video/webm">
 							您的浏览器不支持 video 属性。
 						  </video>
-					</div> -->
+					</div>
 					
 				</div>
 			</div>
@@ -129,6 +139,12 @@ setInterval("toggleSound()",1);
 <script type="text/javascript">
 		var offsetX = $("#loveHeart").width() / 2;
 		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2025,10,15);  //相差一个月	
+		together.setHours(0);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
 		
 		if (!document.createElement('canvas').getContext) {
 			var msg = document.createElement("div");
@@ -144,6 +160,10 @@ setInterval("toggleSound()",1);
 				startHeartAnimation();
 			}, 5000);
 
+	       timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
 		
 			adjustCodePosition();
 			$("#code").typewriter();
